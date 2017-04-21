@@ -3,11 +3,7 @@
 #include "rpcs3.h"
 
 #include "Utilities/Config.h"
-#include "Emu/Memory/Memory.h"
 #include "Emu/System.h"
-
-#include "Gui/ConLogFrame.h"
-#include "Emu/GameInfo.h"
 
 #include "Emu/Io/Null/NullKeyboardHandler.h"
 #include "BasicKeyboardHandler.h"
@@ -30,8 +26,6 @@
 
 #include "Gui/GLGSFrame.h"
 
-#include "Emu/RSX/Null/NullGSRender.h"
-#include "Emu/RSX/GL/GLGSRender.h"
 #include "Emu/Audio/Null/NullAudioThread.h"
 #include "Emu/Audio/AL/OpenALThread.h"
 #ifdef _MSC_VER
@@ -44,10 +38,6 @@
 #endif
 #ifdef __linux__
 #include "Emu/Audio/ALSA/ALSAThread.h"
-#endif
-
-#ifdef __unix__
-#include <X11/Xlib.h>
 #endif
 
 // GUI config
