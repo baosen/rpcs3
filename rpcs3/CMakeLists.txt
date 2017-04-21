@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 2.8.12)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
 set(RES_FILES "")
-include(cotire)
 
 project(rpcs3)
 
@@ -241,6 +240,3 @@ if(LLVM_FOUND)
 endif()
 
 target_link_libraries(rpcs3 rsx_decompiler shader_code)
-
-set_target_properties(rpcs3 PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "${RPCS3_SRC_DIR}/stdafx.h")
-cotire(rpcs3)
